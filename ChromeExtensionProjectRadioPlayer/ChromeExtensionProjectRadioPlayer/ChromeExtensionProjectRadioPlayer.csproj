@@ -47,6 +47,7 @@
     <Content Include="app\bootstrap.min.css" />
     <Content Include="app\bootstrap.min.js" />
     <Content Include="app\fonts\icomoon.svg" />
+    <Content Include="app\icon.style.css" />
     <Content Include="app\img\radio-128.png" />
     <Content Include="app\img\radio-19.png" />
     <Content Include="app\img\radio-48.png" />
@@ -54,24 +55,19 @@
     <Content Include="app\main.style.css" />
     <Content Include="app\popup.html" />
     <Content Include="app\popup.js" />
-    <Content Include="app\icon.style.css" />
     <Content Include="Properties\build\lib\Ionic.Zip.DLL" />
     <Content Include="Properties\build\lib\MSBuild.ExtensionPack.dll" />
+    <Content Include="screenshots\screenshot.png" />
     <Content Include="index.htm" />
     <Content Include="DebugSettings.template.xml" />
-    <Content Include="Properties\build\ligershark.chrome.targets">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Properties\build\ligershark.chrome.targets" />
     <Content Include="screenshots\readme.txt" />
     <Content Include="app\fonts\icomoon.eot" />
     <Content Include="app\fonts\icomoon.ttf" />
     <Content Include="app\fonts\icomoon.woff" />
-    <Content Include="screenshots\screenshot.png" />
+    <Content Include="app\manifest.json" />
     <None Include="scripts\_references.js" />
     <None Include="scripts\chrome-api-vsdoc.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app\manifest.json" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -82,24 +78,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="false" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="false and '$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1530</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:46950/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
   <PropertyGroup>
     <AppFolder Condition=" '$(AppFolder)'=='' ">app\</AppFolder>
     <AppFileName Condition=" '$(AppFileName)'=='' ">$(AssemblyName).zip</AppFileName>
@@ -114,4 +92,22 @@
     <LigerSharkChromeTargetsPath>$(BuildFolder)\ligershark.chrome.targets</LigerSharkChromeTargetsPath>
   </PropertyGroup>
   <Import Project="$(LigerSharkChromeTargetsPath)" Condition="Exists($(LigerSharkChromeTargetsPath))" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5520/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

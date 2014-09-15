@@ -24,17 +24,9 @@ if (localStorage["SelectedStationValue"] != null) {
     var val = 0;
 }
 
-if (localStorage["SelectedVolumeValue"] != null) {
-    var volumer = localStorage["SelectedVolumeValue"];
-} else {
-    var volumer = 0;
-}
-
 window.onload = function () {
     var volumeChange = function () {
         var vol = sliderVol.getValue();
-        localStorage["SelectedVolumeValue"] = vol;
-        console.log("vol:" + vol);
         chrome.extension.sendMessage({ action: "volumeReset", volume: vol });
     };
 
@@ -44,9 +36,6 @@ window.onload = function () {
             return 'Current value: ' + value;
         }
     }).on('slide', volumeChange).data('slider');;
-
-    chrome.extension.sendMessage({ action: "volumeReset", volume: volumer });
-    sliderVol.setValue(parseInt(volumer));
 
     $('.selectpicker').selectpicker({
         style: 'btn-info',

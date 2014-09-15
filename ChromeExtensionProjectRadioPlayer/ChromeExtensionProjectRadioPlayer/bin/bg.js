@@ -5,10 +5,7 @@ audioElement.setAttribute("preload", "auto", "controls");
 var source = document.createElement('source');
 source.type = 'audio/mpeg';
 
-//var id = "koigdohkoimhiiojnhiakphibiinfdpi";
-var id = chrome.runtime.id;
-console.log("id: " + id);
-
+var id = "koigdohkoimhiiojnhiakphibiinfdpi";
 function reloadExtension(id) {
     chrome.management.setEnabled(id, false, function () {
         chrome.management.setEnabled(id, true);
@@ -40,7 +37,6 @@ chrome.extension.onMessage.addListener(
            audioElement.volume = vol;
        }
        if (request.action == "reload") {
-           //reloadExtension(id);
-           chrome.runtime.reload();
+           reloadExtension(id);
        }
    });

@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-fu716p');
-	src:url('fonts/icomoon.eot?#iefix-fu716p') format('embedded-opentype'),
-		url('fonts/icomoon.woff?-fu716p') format('woff'),
-		url('fonts/icomoon.ttf?-fu716p') format('truetype'),
-		url('fonts/icomoon.svg?-fu716p#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?x3bagg');
+	src:url('fonts/icomoon.eot?#iefixx3bagg') format('embedded-opentype'),
+		url('fonts/icomoon.woff?x3bagg') format('woff'),
+		url('fonts/icomoon.ttf?x3bagg') format('truetype'),
+		url('fonts/icomoon.svg?x3bagg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -16,8 +16,7 @@
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	text-shadow: 2px 2px #999;
-    line-height: 1;
+	line-height: 1;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
@@ -27,19 +26,24 @@
 .icon-play:before {
 	content: "\e600";
 }
-.icon-stop:before {
+.icon-pause:before {
 	content: "\e601";
 }
-.icon-volume-increase:before {
+.icon-stop:before {
 	content: "\e602";
 }
-.icon-volume-decrease:before {
+.icon-volume-medium:before {
 	content: "\e603";
 }
-.icon-loop:before {
+.icon-volume-low:before {
 	content: "\e604";
 }
-
-/* jscript for changing color */
-/* $(this).children("#btnPlay").attr("data-icon", '\ue002'); */
-
+.icon-volume-increase:before {
+	content: "\e605";
+}
+.icon-volume-decrease:before {
+	content: "\e606";
+}
+.icon-loop:before {
+	content: "\e607";
+}

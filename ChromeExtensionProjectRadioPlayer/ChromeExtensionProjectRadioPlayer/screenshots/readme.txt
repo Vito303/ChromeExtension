@@ -11,13 +11,13 @@ This app delivers a simple solution! It allows you to play your favorite radio b
 So far:
 · Selected radio stations
 · Play and Stop button
-· Volume UP / Volume DOWN button
-· Refresh button
- 
-Coming soon!
-· Pause button
-· Mute button
+· Volume UP / Volume DOWN button (removed added slider)
+· Refresh button 
+· Pause button (removed only stop)
 · Volume UP / DOWN slider
+· Mute button
+
+Coming soon!
 · Adding link to your favorite on-line radio station
 
 Comment and help us to make this extension even better!

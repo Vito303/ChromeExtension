@@ -166,33 +166,39 @@ p {
 	font-size: 20px;
 }
 #btnPlay {
-    padding: 0 6px 0;
+    padding: 0 5px 0;
 }
 #btnPlay:hover {
     color: #41b7d8;
 }
 #btnStop {
-    padding: 0 30px 0 6px;
+    padding: 0 22px 0 5px;
 }
 #btnStop:hover {
     color: #41b7d8;
 }
 #btnVolumePlus {
-    padding: 0 6px 0;
+    padding: 0 5px 0;
 }
 #btnVolumePlus:hover {
     color: #41b7d8;
 }
 #btnVolumeMinus {
-    padding: 0 6px 0;
+    padding: 0 5px 0;
 }
 #btnVolumeMinus:hover {
     color: #41b7d8;
 }
 #btnReload {
-    padding: 0 22px 0;
+    padding: 0 0px 0;
 }
 #btnReload:hover {
+    color: #41b7d8;
+}
+#btnMute {
+    padding: 0 10px 0;
+}
+#btnMute:hover {
     color: #41b7d8;
 }
 #ex1Slider .slider-selection {
@@ -210,4 +216,7 @@ p {
 }
 .controlContent {
     float: left;
+}
+.highlite {
+    color: #41b7d8;
 }

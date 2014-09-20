@@ -39,6 +39,10 @@ chrome.extension.onMessage.addListener(
            var vol = request.volume / 100;
            audioElement.volume = vol;
        }
+       if (request.action == "mute") {
+           var vol = 0;
+           audioElement.volume = vol;
+       }
        if (request.action == "reload") {
            //reloadExtension(id);
            chrome.runtime.reload();

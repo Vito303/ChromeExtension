@@ -7,7 +7,7 @@ source.type = 'audio/mpeg';
 
 //var id = "koigdohkoimhiiojnhiakphibiinfdpi";
 var id = chrome.runtime.id;
-console.log("id: " + id);
+//console.log("id: " + id);
 
 function reloadExtension(id) {
     chrome.management.setEnabled(id, false, function () {
@@ -21,9 +21,18 @@ chrome.extension.onMessage.addListener(
        audioElement.appendChild(source);
 
        if (request.action == "play") {
-           audioElement.load();
-           //console.log("in play");
-           audioElement.play();
+           // Show loading animation.
+           var audioPromise = audioElement.load();
+
+           if (audioPromise !== undefined) {
+               audioPromise.then(_ => {
+                   //console.log("in play");
+                   audioElement.play();
+               })
+               .catch(error => {
+                   console.log(error);
+               });
+           }
        }
        if (request.action == "stop") {
            //console.log("in stop");

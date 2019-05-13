@@ -1,0 +1,48 @@
+{
+  "stations": [
+    {
+      "name": "Radio Prvi",
+      "link": "http://mp3.rtvslo.si/ra1"
+    },
+    {
+      "name": "Val202",
+      "link": "http://mp3.rtvslo.si/val202"
+    },
+    {
+      "name": "Ars",
+      "link": "http://mp3.rtvslo.si/ars"
+    },
+    {
+      "name": "Radio Koper",
+      "link": "http://mp3.rtvslo.si/rakp"
+    },
+    {
+      "name": "Radio Si",
+      "link": "http://mp3.rtvslo.si/rsi"
+    },
+    {
+      "name": "Radio Maribor",
+      "link": "http://mp3.rtvslo.si/rmb"
+    },
+    {
+      "name": "Radio Capodistria",
+      "link": "http://mp3.rtvslo.si/capo"
+    },
+    {
+      "name": "Radio MMR",
+      "link": "http://mp3.rtvslo.si/mmr"
+    },
+    {
+      "name": "Radio 1",
+      "link": "http://live.radio1.si/Radio1"
+    },
+    {
+      "name": "Hitradio Center",
+      "link": "http://stream2.radiocenter.si:8000/center"
+    },
+    {
+      "name": "Primorski val",
+      "link": "http://212.44.99.35:8000/stream"
+    }
+  ]
+}

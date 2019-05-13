@@ -28,45 +28,29 @@
 </head>
 <body>
     <div class="bgc1 clearfix">
-        <h5 class="mhmm mvm">Radio SLO</h5>
-    </div>
-    <select class="selectpicker">
-        <optgroup label="slo">
-            <option value="0" selected="">Val202</option>
-            <option value="1">Radio Koper</option>
-            <option value="2">Radio 1</option>
-            <option value="3">Radio Center</option>
-            <option value="4">Radio Hit</option>
-            <option value="5">Radio Antena</option>
-            <option value="6">Radio Expres</option>
-            <option value="7">Radio Dur</option>
-        </optgroup>
-        <optgroup label="mix">
-            <option value="8">Radio 4 YoU</option>
-            <option value="9">Radio Dzungla</option>
-            <option value="10">Radio Naxi</option>
-            <option value="11">Radio Jazz</option>
-            <option value="12">Radio Deejay</option>
-        </optgroup>
-    </select>
-    <div class="clearfix contentShadow pbs">
-        <div class="controlContent">
-            <div class="fs1">
-                <i id="btnPlay" class="icon-play" title="Play"></i>
-                <i id="btnStop" class="icon-stop" title="Stop"></i>
-                <!--<i id="btnVolumeMinus" class="icon-volume-decrease"></i>-->
-                <!--<i id="btnVolumePlus" class="icon-volume-increase"></i>-->
-            </div>
-        </div>
-        <div class="sliderContent" title="Volume">
-            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" />
-        </div>
-        <div class="controlContent">
-            <div class="fs1">
-                <i id="btnMute" class="icon-volume-medium" title="Mute"></i>
-                <i id="btnReload" class="icon-loop" title="Reload extension."></i>
+        <select id="stations" class="selectpicker">
+            <option value="0" selected>
+        </select>
+        <div class="clearfix contentShadow pbs">
+            <div class="controlContent">
+                <div class="fs1">
+                    <i id="btnPlay" class="icon-play" title="Play"></i>
+                    <i id="btnStop" class="icon-stop" title="Stop"></i>
+                    <!--<i id="btnVolumeMinus" class="icon-volume-decrease"></i>-->
+                    <!--<i id="btnVolumePlus" class="icon-volume-increase"></i>-->
+                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" />
+                    <i id="btnMute" class="icon-volume-medium" title="Mute"></i>
+                    <i id="btnReload" class="icon-loop" title="Reload extension."></i>
+                </div>
             </div>
         </div>
     </div>
+    <!--<button class="audio-player__main-controller is-paused" data-ember-action="" data-ember-action-284="284">
+        <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-miterlimit="1.41" viewBox="0 0 58 57" clip-rule="evenodd" stroke-linejoin="round" class="audio-player__icon">
+        <g class="icon-player"><path class="border" d="M28.9.4c15.58 0 28.23 12.66 28.23 28.24 0 15.58-12.65 28.24-28.23 28.24C13.3 56.88.66 44.22.66 28.64.66 13.06 13.3.4 28.9.4zm0 3.25c13.8 0 25 11.2 25 25s-11.2 24.98-25 24.98-25-11.2-25-25c0-13.78 11.2-24.98 25-24.98z"></path><path class="loader" d="M44.785 5.07A28.27 28.27 0 0 0 29 .25v3.26c4.975 0 9.837 1.484 13.964 4.264l1.82-2.703z" transform="rotate(263.888 29 29)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 29 29" to="360 29 29" dur="1s" repeatCount="indefinite"></animateTransform></path>
+            <path class="pause" d="M35.15 38.64h-2.5c-.7 0-1.25-.56-1.25-1.25V19.9c0-.7.56-1.26 1.25-1.26h2.5c.7 0 1.25.56 1.25 1.25v17.5c0 .6-.56 1.2-1.25 1.2zm-10 0h-2.5c-.7 0-1.25-.56-1.25-1.25V19.9c0-.7.56-1.26 1.25-1.26h2.5c.7 0 1.25.56 1.25 1.25v17.5c0 .6-.56 1.2-1.25 1.2z"></path>
+            <path class="play-live" d="M38.78 17.95c.22-.26.54-.42.88-.44.34 0 .67.2.9.4 2.73 2.8 4.4 6.6 4.4 10.7 0 4.2-1.67 8-4.4 10.7-.24.3-.57.4-.9.4-.34 0-.65-.1-.87-.4-.1 0-.1 0-.1-.1-.5-.5-.4-1.2 0-1.6 2.3-2.3 3.7-5.5 3.7-8.9 0-3.4-1.4-6.52-3.7-8.8-.5-.43-.5-1.16-.1-1.64v-.1zm-3.1 3.3c.23-.26.56-.42.9-.43.35 0 .68.12.92.37a10.735 10.735 0 0 1-.01 14.6c-.3.2-.6.4-1 .3-.4 0-.7-.2-.9-.48-.1-.07-.2-.14-.2-.2-.4-.5-.4-1.2 0-1.65 1.3-1.43 2.1-3.34 2.1-5.44 0-2.1-.8-4-2.1-5.45-.4-.46-.5-1.16-.1-1.6 0-.1.1-.2.2-.27zm-19.83.43c0-.32.15-.6.4-.75a.68.68 0 0 1 .76 0l10.4 6.8c.3.15.4.42.4.74 0 .3-.1.58-.3.74L17.1 36c-.3.15-.6.16-.8 0-.28-.16-.4-.43-.4-.75V21.68zm16.52 2.8c.23-.3.58-.45.95-.44.37 0 .7.17.94.46a6.884 6.884 0 0 1 1.34 4.06 6.6 6.6 0 0 1-1.36 4.04c-.23.28-.56.45-.92.45s-.7-.15-.93-.42c-.1-.03-.1-.07-.2-.12-.4-.4-.4-1-.1-1.5.5-.6.8-1.5.8-2.4 0-.9-.3-1.7-.8-2.4-.4-.4-.4-1 0-1.5 0 0 0-.1.1-.1z"></path>
+            <path class="play" d="M22.64 19.02c0-.45.2-.84.54-1.06.35-.23.75-.22 1.1 0l14.62 9.62c.34.23.54.6.54 1.06 0 .45-.2.83-.54 1.06l-14.62 9.62c-.35.23-.75.23-1.1 0-.34-.22-.54-.6-.54-1.06V19.02z"></path></g></svg>
+        </button> https://img.rtvslo.si/_static/novi/logo/ -->
 </body>
 </html>

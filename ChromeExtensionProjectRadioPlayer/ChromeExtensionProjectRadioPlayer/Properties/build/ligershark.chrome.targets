@@ -10,7 +10,7 @@
     <AppFolderItem><Visible>false</Visible></AppFolderItem>
   </ItemDefinitionGroup>
 
-  <UsingTask AssemblyFile="$(BuildLib)MSBuild.ExtensionPack.dll" TaskName="MSBuild.ExtensionPack.Compression.Zip" />
+  <UsingTask AssemblyFile="C:\Projects\VisualStudio\ChromeExtension\ChromeExtensionProjectRadioPlayer\packages\MSBuild.Extension.Pack.1.9.1\tools\net40\MSBuild.ExtensionPack.dll" TaskName="MSBuild.ExtensionPack.Compression.Zip" />
   <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);

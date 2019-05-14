@@ -22,17 +22,20 @@ chrome.extension.onMessage.addListener(
 
        if (request.action == "play") {
            // Show loading animation.
-           var audioPromise = audioElement.load();
+           //var audioPromise = audioElement.load();
 
-           if (audioPromise !== undefined) {
-               audioPromise.then(_ => {
-                   //console.log("in play");
-                   audioElement.play();
-               })
-               .catch(error => {
-                   console.log(error);
-               });
-           }
+           //if (audioPromise !== undefined) {
+           //    audioPromise.then(_ => {
+           //        //console.log("in play");
+           //        audioElement.play();
+           //    })
+           //    .catch(error => {
+           //        console.log(error);
+           //    });
+           //}
+           audioElement.load();
+
+           audioElement.play();
        }
        if (request.action == "stop") {
            //console.log("in stop");

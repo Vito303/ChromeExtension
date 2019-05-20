@@ -16,7 +16,7 @@ getArray().done(function (json) {
     $.each(json, function (key, val) {
         $.each(val, function (key, val) {
             stations[index++] = new station(val.name, val.link);
-        });        
+        });
     });
 });
 
@@ -81,7 +81,8 @@ window.onload = function () {
         size: 'false' /*'auto'*/
     });
 
-    $('.selectpicker').selectpicker('val', val);
+    $('#stations').val(val);
+    //$('.selectpicker').selectpicker('val', val);
     $('.selectpicker').selectpicker('render');
 
     $('#btnPlay').click(function () {
@@ -97,7 +98,7 @@ window.onload = function () {
     $('#btnStop').click(function () {
         //$('#btnStop').addClass('highlite');
         $('#btnPlay').removeClass('highlite');
-        delete localStorage["SelectedStationValue"];
+        //delete localStorage["SelectedStationValue"];
         localStorage["SelectedPlay"] = "false";
         chrome.extension.sendMessage({ action: "stop" });
     });

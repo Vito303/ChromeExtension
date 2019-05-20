@@ -16,47 +16,36 @@ function reloadExtension(id) {
 }
 
 chrome.extension.onMessage.addListener(
-   function (request, sender, sendResponse) {
-       source.src = request.link;
-       audioElement.appendChild(source);
+    function (request, sender, sendResponse) {
+        if (audioElement !== undefined) {
+            source.src = request.link;
+            audioElement.appendChild(source);
 
-       if (request.action == "play") {
-           // Show loading animation.
-           //var audioPromise = audioElement.load();
-
-           //if (audioPromise !== undefined) {
-           //    audioPromise.then(_ => {
-           //        //console.log("in play");
-           //        audioElement.play();
-           //    })
-           //    .catch(error => {
-           //        console.log(error);
-           //    });
-           //}
-           audioElement.load();
-
-           audioElement.play();
-       }
-       if (request.action == "stop") {
-           //console.log("in stop");
-           audioElement.pause();
-       }
-       if (request.action == "volumePlus") {
-           audioElement.volume += .2;
-       }
-       if (request.action == "volumeMinus") {
-           audioElement.volume -= .2;
-       }
-       if (request.action == "volumeReset") {
-           var vol = request.volume / 100;
-           audioElement.volume = vol;
-       }
-       if (request.action == "mute") {
-           var vol = 0;
-           audioElement.volume = vol;
-       }
-       if (request.action == "reload") {
-           //reloadExtension(id);
-           chrome.runtime.reload();
-       }
-   });
+            if (request.action == "play") {
+                audioElement.load();
+                audioElement.play();
+            }
+            if (request.action == "stop") {
+                //console.log("in stop");
+                audioElement.pause();
+            }
+            if (request.action == "volumePlus") {
+                audioElement.volume += .2;
+            }
+            if (request.action == "volumeMinus") {
+                audioElement.volume -= .2;
+            }
+            if (request.action == "volumeReset") {
+                var vol = request.volume / 100;
+                audioElement.volume = vol;
+            }
+            if (request.action == "mute") {
+                var vol = 0;
+                audioElement.volume = vol;
+            }
+        }
+        if (request.action == "reload") {
+            //reloadExtension(id);
+            chrome.runtime.reload();
+        }
+    });

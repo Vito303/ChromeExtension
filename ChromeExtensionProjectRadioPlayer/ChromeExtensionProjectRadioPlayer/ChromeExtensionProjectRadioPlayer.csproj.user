@@ -24,8 +24,8 @@
           <ExternalProgram>C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</ExternalProgram>
           <StartExternalURL>
           </StartExternalURL>
-          <StartCmdLineArguments>--load-extension="C:\Projects\VisualStudio\ChromeExtension\ChromeExtensionProjectRadioPlayer\ChromeExtensionProjectRadioPlayer\app"</StartCmdLineArguments>
-          <StartWorkingDirectory>C:\Projects\VisualStudio\ChromeExtension\ChromeExtensionProjectRadioPlayer\ChromeExtensionProjectRadioPlayer\app</StartWorkingDirectory>
+          <StartCmdLineArguments>--load-extension="C:\Projects\Extension\ChromeExtension\ChromeExtensionProjectRadioPlayer\ChromeExtensionProjectRadioPlayer\app"</StartCmdLineArguments>
+          <StartWorkingDirectory>C:\Projects\Extension\ChromeExtension\ChromeExtensionProjectRadioPlayer\ChromeExtensionProjectRadioPlayer\app</StartWorkingDirectory>
           <EnableENC>True</EnableENC>
           <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
         </WebProjectProperties>

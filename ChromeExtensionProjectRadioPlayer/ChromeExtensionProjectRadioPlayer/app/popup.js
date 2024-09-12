@@ -5,20 +5,20 @@ function station(name, link) {
     this.link = link;
 };
 
-function getArray() {
-    //http://www.listenlive.eu/slovenia.html
-    return $.getJSON('data/stations.json');
-};
+//function getArray() {
+//    //http://www.listenlive.eu/slovenia.html
+//    return $.getJSON('data/stations.json');
+//};
 
 var index = 0;
 
-getArray().done(function (json) {
-    $.each(json, function (key, val) {
-        $.each(val, function (key, val) {
-            stations[index++] = new station(val.name, val.link);
-        });
-    });
-});
+//getArray().done(function (json) {
+//    $.each(json, function (key, val) {
+//        $.each(val, function (key, val) {
+//            stations[index++] = new station(val.name, val.link);
+//        });
+//    });
+//});
 
 if (localStorage["SelectedStationValue"] != null) {
     var val = localStorage["SelectedStationValue"];
@@ -37,10 +37,33 @@ function hasClass(elem, className) {
 };
 
 window.onload = function () {
-    $.each(stations, function (key, value) {
-        $('#stations')
-            .append($('<option>', { value: key })
-                .text(value.name));
+    $.getJSON('data/stations.json', function (data) {
+        //console.log("stations loaded:", data);
+
+        $.each(data, function (key, val) {
+            $.each(val, function (key, val) {
+                stations[index++] = new station(val.name, val.link);
+            });
+        });
+
+        $('#stations').empty(); // Clear existing options
+        $.each(stations, function (key, value) {
+            $('#stations')
+                .append($('<option>', { value: key })
+                    .text(value.name));
+
+        });
+
+        $("#stations").selectpicker('refresh');
+        var selectedVal = localStorage["SelectedStationValue"];
+        if (selectedVal != 0) {
+            //console.log("seleced:" + selectedVal);
+            selectedVal++;
+            $('#stations').selectpicker('val', $('#stations option:nth-child('+selectedVal+')').val());
+        }
+        
+    }, function (xhr, status, error) {
+        console.error("Error fetching stations.json", error);
     });
 
     var volumeChange = function () {
@@ -81,9 +104,9 @@ window.onload = function () {
         size: 'false' /*'auto'*/
     });
 
-    $('#stations').val(val);
+    //$('#stations').val(selectedVal);
     //$('.selectpicker').selectpicker('val', val);
-    $('.selectpicker').selectpicker('render');
+    //$('.selectpicker').selectpicker('render');
 
     $('#btnPlay').click(function () {
         val = $('.selectpicker option:selected').val();

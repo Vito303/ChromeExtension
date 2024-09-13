@@ -1,10 +1,10 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
 
   "name": "Radio SLO",
   "short_name": "Radio SLO online radio player.",
   "description": "Radio SLO is extension app where you can select your popular radio to play in background of chrome browser.",
-  "version": "1.1.9",
+  "version": "1.1.11",
 
   "permissions": [
     "management",
